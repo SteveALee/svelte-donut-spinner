@@ -1,6 +1,6 @@
 # svelte-donut-spinner
 
-A simple inclusive random spinner app. The primary use case is to support support providers in leading interesting and engaging activities for people with cognitive disabilities. 
+A simple inclusive random spinner app. The primary use case is to enable support providers to create interesting, engaging and fun activities for people with cognitive disabilities.
 
 A sample [svelte](https://github.com/sveltejs/svelte) app showcasing a number of features (See dev notes below)
 
