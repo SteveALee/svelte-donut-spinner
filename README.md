@@ -1,5 +1,9 @@
 # svelte-donut-spinner
 
+Deployed on Netlify.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6433aefa-5315-4b0b-913a-9796b6bc55d1/deploy-status)](https://app.netlify.com/sites/elegant-dubinsky-0761a9/deploys)
+
 A simple inclusive random spinner app. The primary use case is to enable support providers to create interesting, engaging and fun activities for people with cognitive disabilities.
 
 A sample [svelte](https://github.com/sveltejs/svelte) app showcasing a number of features (See dev notes below)
