@@ -122,6 +122,10 @@
 	Spin
 </button>
 
+<a id="netlify" href="https://www.netlify.com">
+	<img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" />
+</a>
+
 <svelte:window on:keydown={keydown} />
 
 <style>
@@ -220,7 +224,7 @@
 		position: absolute;
 		right: 2%;
 		bottom: 2%;
-		font-size: 3rem;
+		font-size: calc(5vw);
 		border-radius: 50%;
 		border-width: 0.4rem;
 		color: darkred;
@@ -228,5 +232,11 @@
 		border-color: darkred;
 		background-color: #ffd7d7;
 		padding: 0.8em;
+	}
+
+	#netlify {
+		position: absolute;
+		left: 2%;
+		bottom: 2%;
 	}
 </style>
