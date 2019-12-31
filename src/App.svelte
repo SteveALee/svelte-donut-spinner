@@ -123,7 +123,9 @@
 </button>
 
 <a id="netlify" href="https://www.netlify.com">
-	<img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" />
+	<img
+		src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
+		alt="netlify logo" />
 </a>
 
 <svelte:window on:keydown={keydown} />
