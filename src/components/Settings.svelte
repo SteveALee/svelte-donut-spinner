@@ -27,7 +27,7 @@
 		type="range"
 		bind:value={$settingsStore.numSegments}
 		min="2"
-		max="10" />
+		max="12" />
 </label>
 
 <label>
