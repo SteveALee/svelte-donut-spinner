@@ -3,6 +3,7 @@
 
 	const defaultSettings = {
 		version: 1,
+		noteSegments: false,
 		numSegments: 6,
 		showHeader: true,
 		header: 'Do you feel lucky?',
@@ -21,13 +22,19 @@
 </label>
 
 <label>
+	Musical Notes:
+	<input type="checkbox" bind:checked={$settingsStore.noteSegments} />
+</label>
+
+<label>
 	Segments:
 	<span>{$settingsStore.numSegments}</span>
 	<input
 		type="range"
 		bind:value={$settingsStore.numSegments}
 		min="2"
-		max="12" />
+		max="12"
+		disabled={$settingsStore.noteSegments} />
 </label>
 
 <label>

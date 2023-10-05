@@ -4,18 +4,43 @@
 	import Modal from './components/Modal.svelte'
 	import Settings, { settingsStore } from './components/Settings.svelte'
 
-	function mkSegments(nSegments) {
+	function mkSegments(bNoteSegments, nSegments) {
 		const colour1 = 'lightblue'
 		const colour2 = 'deepskyblue'
+		const notesText = [
+			'A',
+			'B♭',
+			'B',
+			'C',
+			'D♭',
+			'D',
+			'E♭',
+			'E',
+			'F',
+			'G♭',
+			'G',
+			'A♭',
+		]
 		const segments = Array.from({ length: nSegments }, (_, i) => ({
 			value: 1,
 			colour: i % 2 ? colour1 : colour2,
-			text: (i + 1).toString(),
+			text: bNoteSegments ? notesText[i] : (i + 1).toString(),
+			speech:
+				bNoteSegments && notesText[i][1] == '♭'
+					? notesText[i][0] + ' flat'
+					: undefined,
 		}))
 		return segments
 	}
 
-	$: segments = mkSegments($settingsStore.numSegments)
+	$: if ($settingsStore.noteSegments) {
+		$settingsStore.numSegments = 12
+	}
+
+	$: segments = mkSegments(
+		$settingsStore.noteSegments,
+		$settingsStore.numSegments,
+	)
 
 	let showHelp = false
 	let showSettings = false

@@ -34,7 +34,12 @@
 	function handleSpinEnd() {
 		spinning = false
 
-		const text = selected !== null ? segments[selected].text : undefined
+		const text =
+			selected !== null
+				? segments[selected].speech
+					? segments[selected].speech
+					: segments[selected].text
+				: undefined
 		if (text) {
 			speak(`${text}!`)
 		}
